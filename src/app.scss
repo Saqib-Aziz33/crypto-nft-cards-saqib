@@ -103,6 +103,17 @@ h1,h2,h3,h4,h5,h6{
     .content{
         width: calc(100% - $sidebar_width);
     }
+    .cards{
+        .card-item{
+            border-radius: 0 0 15px 15px;
+            overflow: hidden;
+            box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.4);
+            .bg{
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
 }
 .sidebar-content{
     .item{
