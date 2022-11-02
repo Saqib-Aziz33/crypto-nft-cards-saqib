@@ -1,10 +1,12 @@
 // components
+import TopCollections from "../components/elments/TopCollections";
+import { Box } from "@chakra-ui/react";
 
 function Home() {
   return (
-    <div className="home-page">
-      <></>
-    </div>
+    <Box className="home-page" py={8} px={4}>
+      <TopCollections />
+    </Box>
   );
 }
 export default Home;

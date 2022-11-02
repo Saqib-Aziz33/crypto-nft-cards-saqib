@@ -31,10 +31,12 @@ h1,h2,h3,h4,h5,h6{
 
 // ******************************* components *******************************
 .header{
+    position: sticky;
+    top: 0;
     background-color: $clr-dark;
     color: white;
     .search-bar{
-        min-width: 300px;
+        max-width: 300px;
         &::placeholder{
             color: white;
         }
@@ -50,6 +52,44 @@ h1,h2,h3,h4,h5,h6{
         font-size: 1.5rem;
     }
 }
+
+.slides{
+    .slide-item{
+        position: relative;
+        width: 300px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        margin: 0.5rem 1rem;
+        overflow: hidden;
+        &:hover{
+            border-color: cyan;
+        }
+    }
+    .bg{
+        background-size: cover;
+        height: 200px;
+        transition: all 0.2s;
+        width: auto;
+        &:hover{
+            scale: 1.1;
+        }
+    }
+    .info{
+        background: linear-gradient(to top, black, transparent);
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+
+// pages
+.home-page{
+    background-color: $clr-dark;
+    color: white;
+}
+
 
 // ******************************* overrides *******************************
 
