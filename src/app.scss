@@ -32,6 +32,7 @@ h1,h2,h3,h4,h5,h6{
 // ******************************* components *******************************
 .header{
     position: sticky;
+    z-index: 50;
     top: 0;
     background-color: $clr-dark;
     color: white;
@@ -83,6 +84,36 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
+.dashboard{
+    $sidebar_width: 300px;
+    .sidebar{
+        position: sticky;
+        top: 4rem;
+        width: $sidebar_width;
+        height: 400px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        &::-webkit-scrollbar{
+            width: 4px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: transparent;
+        }
+    }
+    .content{
+        width: calc(100% - $sidebar_width);
+    }
+}
+.sidebar-content{
+    .item{
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(255, 255, 255, 0.2);
+        }
+    }
+}
 
 // pages
 .home-page{

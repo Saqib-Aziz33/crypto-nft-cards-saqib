@@ -35,9 +35,9 @@ function Slides() {
             />
             <HStack className="info" p={4}>
               <Image h={30} w={30} src={item.aimg} rounded="full" />
-              <Box maxW="100px" textOverflow="ellipsis">
-                <Text>{item.title}</Text>
-              </Box>
+              {/* <Box maxW="100px" textOverflow="ellipsis"> */}
+              <Text>{item.title}</Text>
+              {/* </Box> */}
               <Image src="assets/tick.svg" />
             </HStack>
           </Box>
