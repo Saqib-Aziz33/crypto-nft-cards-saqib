@@ -43,7 +43,7 @@ function Dashboard() {
           >
             {cryptos.map((item, i) => (
               <GridItem className="card-item" key={i}>
-                <Link to={`/crypto/${i}`}>
+                <Link to={`/crypto/${item.id}`}>
                   <Box
                     h={{
                       base: 200,

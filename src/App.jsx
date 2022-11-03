@@ -4,6 +4,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Base from "./components/layout/Base";
 // pages
 import { Home, NotFound } from "./pages";
+import CryptoInfo from "./pages/CryptoInfo";
 // others
 import "./app.scss";
 
@@ -15,6 +16,7 @@ function App() {
           <Base>
             <Routes>
               <Route index path="/" element={<Home />} />
+              <Route path="/crypto/:id" element={<CryptoInfo />} />
               <Route path="/*" element={<NotFound />} />
             </Routes>
           </Base>

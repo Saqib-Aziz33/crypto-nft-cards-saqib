@@ -23,7 +23,7 @@ function Header() {
           flexDir={{ base: "column", md: "row" }}
         >
           <Flex gap={4}>
-            <img src="assets/logo.svg" alt="" />
+            <img src="/assets/logo.svg" alt="" />
             <Input
               type="search"
               rounded="3xl"
@@ -53,7 +53,9 @@ function Header() {
                 </MenuList>
               </Menu>
             </Box>
-            <Button colorScheme="telegram">Create</Button>
+            <Button colorScheme="cyan" color="white">
+              Create
+            </Button>
           </HStack>
         </HStack>
       </Box>
