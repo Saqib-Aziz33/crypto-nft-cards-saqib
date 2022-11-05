@@ -22,7 +22,7 @@ function Footer() {
             Copyright © 2022 Crypto.com. All rights reserved
           </Text>
         </Box>
-        <HStack fontSize="sm" color="gray.400" gap={4}>
+        <HStack flexWrap="wrap" fontSize="sm" color="gray.400" gap={4}>
           <a href="#">Help Center</a>
           <a href="#">Blog</a>
           <a href="#">T&C</a>

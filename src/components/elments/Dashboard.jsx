@@ -35,7 +35,8 @@ function Dashboard() {
             className="cards"
             gap={4}
             gridTemplateColumns={{
-              base: "repeat(2, 1fr)",
+              base: "repeat(1fr)",
+              sm: "1fr 1fr",
               lg: "repeat(3, 1fr)",
               xl: "repeat(3, 1fr)",
               "2xl": "repeat(4, 1fr)",

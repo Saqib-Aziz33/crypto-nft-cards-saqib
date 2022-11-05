@@ -33,7 +33,6 @@ body{
     background-color: $clr-dark;
     color: white;
     .search-bar{
-        max-width: 300px;
         &::placeholder{
             color: white;
         }
@@ -53,7 +52,7 @@ body{
 .slides{
     .slide-item{
         position: relative;
-        width: 300px;
+        width: 80%;
         cursor: pointer;
         border: 2px solid transparent;
         border-radius: 8px;

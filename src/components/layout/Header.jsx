@@ -1,6 +1,5 @@
 import {
   Box,
-  Container,
   HStack,
   Input,
   Menu,
@@ -11,7 +10,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { AiFillCaretDown } from "react-icons/ai";
+import { AiFillCaretDown, AiOutlineBars } from "react-icons/ai";
 
 function Header() {
   return (
@@ -20,18 +19,20 @@ function Header() {
         <HStack
           gap={4}
           justifyContent="space-between"
-          flexDir={{ base: "column", md: "row" }}
+          // flexDir={{ base: "column", md: "row" }}
         >
           <Flex gap={4}>
             <img src="/assets/logo.svg" alt="" />
             <Input
+              w="300px"
               type="search"
               rounded="3xl"
               placeholder="Search"
               className="search-bar"
+              display={{ base: "none", md: "block" }}
             />
           </Flex>
-          <HStack gap={4}>
+          <HStack gap={4} display={{ base: "none", md: "flex" }}>
             <Link to="/marketplace" className="active">
               Marketplace
             </Link>
@@ -57,6 +58,9 @@ function Header() {
               Create
             </Button>
           </HStack>
+          <Button colorScheme="cyan" display={{ base: "block", md: "none" }}>
+            <AiOutlineBars size={25} style={{ color: "#fff" }} />
+          </Button>
         </HStack>
       </Box>
     </header>
