@@ -80,7 +80,7 @@ body{
 }
 
 .dashboard{
-    $sidebar_width: 300px;
+    $sidebar_width: 250px;
     .sidebar{
         position: sticky;
         top: 4rem;
@@ -108,6 +108,13 @@ body{
                 background-size: cover;
             }
         }
+    }
+
+    .filterbar{
+        padding: 1rem;
+        position: sticky;
+        top: 4rem;
+        background-color: $clr-dark;
     }
 }
 .sidebar-content{

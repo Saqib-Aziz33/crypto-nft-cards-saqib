@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Image, Text } from "@chakra-ui/react";
+import { Box, HStack, Image, Text } from "@chakra-ui/react";
 import data from "../../data/top_collections.json";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";

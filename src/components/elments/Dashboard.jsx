@@ -9,29 +9,59 @@ import {
   Image,
   Text,
   Tooltip,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Button,
 } from "@chakra-ui/react";
 import Sidebar from "./Sidebar";
 import { useState } from "react";
 import data from "../../data/crypto_data.json";
 import { Link } from "react-router-dom";
+import { AiFillCaretDown } from "react-icons/ai";
+import SideDrawer from "./SideDrawer";
 
 function Dashboard() {
-  const [cryptos, setCryptos] = useState(data);
+  const [cryptos] = useState(data);
 
   return (
-    <Box className="dashboard" py={8} px={4}>
+    <Box className="dashboard" py={8} px={{ base: 2, md: 4 }}>
       <Flex>
         <Box display={{ base: "none", md: "block" }} className="sidebar">
           <Sidebar />
         </Box>
         <Container
           maxW={2000}
-          w={{ base: "100%", md: "calc(100% - 300px)" }}
-          pl={{ base: 0, md: 4 }}
+          // 250px is sidebar width
+          w={{ base: "100%", md: "calc(100% - 250px)" }}
+          px={[0, 2, 4]}
         >
-          <Flex className="filter-bar"></Flex>
+          {/* filterbar */}
+          <HStack justify="space-between" className="filterbar">
+            <Box visibility={{ base: "visible", md: "hidden" }}>
+              <SideDrawer />
+            </Box>
+            <Menu>
+              <MenuButton as="button">
+                <Button bg="transparent" border="1px solid #fff" rounded="2xl">
+                  Sort By
+                  <AiFillCaretDown style={{ display: "inline" }} />
+                </Button>
+              </MenuButton>
+              <MenuList color="black">
+                <MenuItem>Download</MenuItem>
+                <MenuItem>Create a Copy</MenuItem>
+                <MenuItem>Mark as Draft</MenuItem>
+                <MenuItem>Delete</MenuItem>
+                <MenuItem>Attend a Workshop</MenuItem>
+              </MenuList>
+            </Menu>
+          </HStack>
 
+          {/* cards grid */}
           <Grid
+            pt={8}
             className="cards"
             gap={4}
             gridTemplateColumns={{
@@ -47,7 +77,7 @@ function Dashboard() {
                 <Link to={`/crypto/${item.id}`}>
                   <Box
                     h={{
-                      base: 200,
+                      base: 400,
                       sm: 300,
                       xl: 400,
                     }}
